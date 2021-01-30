@@ -1,0 +1,70 @@
+.t-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 28%;
+    background: #4226e0;
+    background-image: linear-gradient(to left, #3044f6, #4226e0)
+}
+
+.m-6 {
+    margin: 10%;
+}
+
+.ml-6 {
+    margin-left: 10%;
+}
+
+.t-circle {
+    border-radius: 50px;
+    background-color: #606de4;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.t-circle-active {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b0b7f8;
+    color: #4226e0;
+}
+
+.t-sidebar-item:hover .t-circle {
+    background-color: #b0b7f8;
+    color: #4226e0;
+}
+
+.t-sidebar-item {
+    color: #b0b7f8;
+}
+
+.t-sidebar-item:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.t-sidebar-footer {
+    background-color: #606de4;
+    border-radius: 5px;
+    color: white;
+    height: 15%;
+    width: 80%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.t-link {
+    color: white;
+    text-decoration: underline;
+}

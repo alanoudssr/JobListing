@@ -2,37 +2,173 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.t-bg {
+  background-color: #fbfeff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.t-section{
+  margin-top: 50px;
+}
+
+.t-section__header{
+  margin-bottom: 20px;
+}
+
+.secondary-bg {
+    background-color: #5566ff !important;
+    border-color: #5566ff !important;
   }
+  
+.secondary-bg:hover{    
+    background-color: #929dff !important;
+    border-color: #929dff !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.bg {
+  background-color: #3044f6;
+}
+
+.t-flex-row {
+display: flex;
+align-content: center;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+margin: 0 auto;
+}
+
+.t-flex-column{
   flex-direction: column;
+}
+
+.t-flex--start{
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.t-flex-start{
+  justify-content: flex-start;
+}
+
+.t-flex-end{
+  justify-content: flex-end;
+}
+
+.t-flex-between{
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.t-flex-nowrap{
+ flex-wrap: nowrap;
+}
+
+.t-card {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  border: 1px solid #d7e2e9;
+  background-color: white;
+  position: relative;
+  padding: 25px;
+  height: 320px;
+  width: 440px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.t-card-subtitle{
+  color: #8e9ca4;
+  font-size: 14px;
+}
+
+.t-card-title {
+  overflow: hidden;
+    height: 30px;
+}
+
+.t-card-footer{
+  border-top: 1px solid #dee4e7;
+  padding-top: 5px;  
+ position: absolute;
+   bottom: 10px;
+}
+
+.t-tag-card {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  height: 30px;
+  background: #e4f2fa;
+  color: #6371f3;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.t-card-header{
+  color: black
+}
+
+.t-menu-logo{
+  height:50px;
+}
+
+.t-logo{
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  border: 1px solid #d7e2e9;
+max-width:100%;
+max-height:100%;}
+
+.t-col-4{
+  flex-basis: calc(33.3333% - 30px);
+}
+
+.t-icon {
+  color: #c7ccfb;
+  font-size: 20px;
+}
+
+.t-icon-lg {
+  color: #c7ccfb;
+  font-size: 50px;
+}
+
+.t-icon--active {
+  color: #3044f6;
+}
+
+.t-sub-menu{
+  padding: 20px;
+}
+
+.t-sm {
+  font-size:14px
+}
+
+.mt-m1 {
+  margin-top: -10px;
+}
+
+.t-btn{
+  border: none;
+  box-shadow: 1px 1px 5px #3044f6;;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  height: 50px;
+  width: 130px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #3044f6;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.t-btn-reverse{
+  color: #3044f6;
+  box-shadow: 1px 1px 5px #3044f6;
+  background: white;
 }
