@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <HashRouter basename='/'>
+  <HashRouter>
     <App />
   </HashRouter>,
   document.getElementById('root')

@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { BsFillBookmarkFill, BsFillGridFill, BsList } from 'react-icons/bs';
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
 
 import Header from '../../shared/components/Header/Header'
 
@@ -18,6 +19,8 @@ const List = () => {
     const [jobs, setJobs] = useState([])
     const [bookmarks, setBookmarks] = useState([])
     const [grid, setGrid] = useState(false)
+
+    const notify = () => toast('Fetching Error: Try Again', { type: toast.TYPE.ERROR });
 
     const arr = ["Wordwall",
         "Onna",
@@ -38,7 +41,8 @@ const List = () => {
     useEffect(() => {
         getJobs()
             .then((results) => {
-                setJobs(results.filter(job => !arr.includes(job.company)))
+                if (results) { setJobs(results.filter(job => !arr.includes(job.company))) }
+                else { notify() }
             })
     }, [])
 
@@ -82,6 +86,17 @@ const List = () => {
     return (
         <Fragment>
             <Header />
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <div className='t-bg'>
                 <Container>
                     <div className='t-flex-row t-flex-between pb-1 t-sub-menu'>
