@@ -26,6 +26,11 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
+                    <div className='t-flex-row t-flex-between'>
+                        <Button className="secondary-bg t-btn-lg">Post a Job</Button>
+                        <span className='t-login t-menu-link'>Log in</span>
+                        <span className='t-menu-link'>Sign Up</span>
+                    </div>
                 </Container>
             </Navbar>
             <Navbar className="bg" expand="lg">

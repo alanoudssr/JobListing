@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const getJobs = async () => {
     try {
-        const response = await axios.get('https://jobs.github.com/positions.json')
+        const response = await axios.get('https://demo5847386.mockable.io/jobs')
         return response.data
     }
     catch (error) {

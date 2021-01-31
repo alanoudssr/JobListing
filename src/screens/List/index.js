@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 
 import Header from '../../shared/components/Header/Header'
+import CustomDropdown from '../../shared/components/CustomeDropdown'
 
 import logo from '../../assets/imgs/logo.png'
 import './list.css';
@@ -22,28 +23,9 @@ const List = () => {
 
     const notify = () => toast('Fetching Error: Try Again', { type: toast.TYPE.ERROR });
 
-    const arr = ["Wordwall",
-        "Onna",
-        "Strategic Financial Solutions",
-        "Global Canopy",
-        "CompuGroup Medical SE & Co. KGaA",
-        "Element 84, Inc.", "Neteffects",
-        "CompuGroup Medical SE & Co. KGaA",
-        "Valve and Meter", "CircleBlack, Inc",
-        "Teamshares", "Intersog",
-        "Interledger Foundation",
-        "Stony Brook University",
-        "EventMobi", "Relationship One",
-        "Ignitia AB", "TeleSoftas",
-        "Children's Miracle Network Hospitals",
-        "Open Cosmos"]
-
     useEffect(() => {
         getJobs()
-            .then((results) => {
-                if (results) { setJobs(results.filter(job => !arr.includes(job.company))) }
-                else { notify() }
-            })
+            .then((results) => { setJobs(results) })
     }, [])
 
 
@@ -102,6 +84,8 @@ const List = () => {
                     <div className='t-flex-row t-flex-between pb-1 t-sub-menu'>
                         <span>{`${jobs.length} jobs found`}</span>
                         <div className='t-flex-row m-0'>
+                            <span>Sort By: </span>
+                            <CustomDropdown />
                             <BsFillGridFill className={classNames('ml-2 t-icon', {
                                 't-icon--active': !grid
                             })}

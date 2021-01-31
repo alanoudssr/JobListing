@@ -87,7 +87,7 @@ margin: 0 auto;
   font-size: 14px;
   line-height: 14px;
   height: 30px;
-  background: #e4f2fa;
+  background: #eaeefa;
   color: #6371f3;
   border-radius: 5px;
   padding: 5px 15px;
@@ -143,6 +143,11 @@ max-height:100%;}
   background: white;
 }
 
+.t-btn-lg{
+  width: 130px;
+  font-size: 12px;
+    padding: 10px;
+}
 /*  */
 .bg {
   background-color: #3044f6;
@@ -168,4 +173,26 @@ max-height:100%;}
 
 .mt-m1 {
   margin-top: -10px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.t-menu-link {
+  color: white;
+  padding: 0px 20px;
+}
+
+.t-login{
+  border-right: 1px solid rgba(255, 255, 255, 0.555);
+}
+
+.t-sort {
+  color: #3044f6 !important;
+  margin-left: 10px !important;
+  margin-right: 30px !important;
+  padding-right: 30px !important;
+  border-right: 1px solid #c6cbce;
+  text-decoration: underline;
 }
