@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/JobListing/static/css/main.4a3f6be4.chunk.css",
-    "main.js": "/JobListing/static/js/main.8a584f28.chunk.js",
-    "main.js.map": "/JobListing/static/js/main.8a584f28.chunk.js.map",
+    "main.js": "/JobListing/static/js/main.cd38e954.chunk.js",
+    "main.js.map": "/JobListing/static/js/main.cd38e954.chunk.js.map",
     "runtime-main.js": "/JobListing/static/js/runtime-main.853747c6.js",
     "runtime-main.js.map": "/JobListing/static/js/runtime-main.853747c6.js.map",
     "static/css/2.1c5d1208.chunk.css": "/JobListing/static/css/2.1c5d1208.chunk.css",
-    "static/js/2.87368f2c.chunk.js": "/JobListing/static/js/2.87368f2c.chunk.js",
-    "static/js/2.87368f2c.chunk.js.map": "/JobListing/static/js/2.87368f2c.chunk.js.map",
+    "static/js/2.02013189.chunk.js": "/JobListing/static/js/2.02013189.chunk.js",
+    "static/js/2.02013189.chunk.js.map": "/JobListing/static/js/2.02013189.chunk.js.map",
     "static/js/3.5f9cb325.chunk.js": "/JobListing/static/js/3.5f9cb325.chunk.js",
     "static/js/3.5f9cb325.chunk.js.map": "/JobListing/static/js/3.5f9cb325.chunk.js.map",
     "index.html": "/JobListing/index.html",
     "static/css/2.1c5d1208.chunk.css.map": "/JobListing/static/css/2.1c5d1208.chunk.css.map",
     "static/css/main.4a3f6be4.chunk.css.map": "/JobListing/static/css/main.4a3f6be4.chunk.css.map",
-    "static/js/2.87368f2c.chunk.js.LICENSE.txt": "/JobListing/static/js/2.87368f2c.chunk.js.LICENSE.txt"
+    "static/js/2.02013189.chunk.js.LICENSE.txt": "/JobListing/static/js/2.02013189.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.853747c6.js",
     "static/css/2.1c5d1208.chunk.css",
-    "static/js/2.87368f2c.chunk.js",
+    "static/js/2.02013189.chunk.js",
     "static/css/main.4a3f6be4.chunk.css",
-    "static/js/main.8a584f28.chunk.js"
+    "static/js/main.cd38e954.chunk.js"
   ]
 }
