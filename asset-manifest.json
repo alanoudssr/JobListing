@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/JobListing/static/css/main.4a3f6be4.chunk.css",
-    "main.js": "/JobListing/static/js/main.d976f58a.chunk.js",
-    "main.js.map": "/JobListing/static/js/main.d976f58a.chunk.js.map",
+    "main.js": "/JobListing/static/js/main.aa8344a6.chunk.js",
+    "main.js.map": "/JobListing/static/js/main.aa8344a6.chunk.js.map",
     "runtime-main.js": "/JobListing/static/js/runtime-main.853747c6.js",
     "runtime-main.js.map": "/JobListing/static/js/runtime-main.853747c6.js.map",
     "static/css/2.1c5d1208.chunk.css": "/JobListing/static/css/2.1c5d1208.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.1c5d1208.chunk.css",
     "static/js/2.6ddef158.chunk.js",
     "static/css/main.4a3f6be4.chunk.css",
-    "static/js/main.d976f58a.chunk.js"
+    "static/js/main.aa8344a6.chunk.js"
   ]
 }
