@@ -1,11 +1,17 @@
 import React, { useEffect, useState, Fragment } from 'react'
-import { getJobs } from '../../requests/api'
-import { Container } from 'react-bootstrap'
-import logo from '../../assets/imgs/logo.png'
-import Header from '../../Header'
-import { Link } from 'react-router-dom'
-import { BsFillBookmarkFill, BsFillGridFill, BsList } from 'react-icons/bs';
 import classNames from 'classnames'
+
+import { BsFillBookmarkFill, BsFillGridFill, BsList } from 'react-icons/bs';
+import { Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+
+import Header from '../../shared/components/Header/Header'
+
+import logo from '../../assets/imgs/logo.png'
+import './list.css';
+
+import { getJobs } from '../../requests/api'
+
 
 const List = () => {
 
@@ -61,7 +67,7 @@ const List = () => {
                         <h4 className='t-card-title'>{job.title}</h4>
                     </Link>
                     <h5 className='mt-2 t-card-subtitle'>{job.location}</h5>
-                    <div className='t-tag-card mb-3'>{job.type}</div>
+                    <div className='t-card-tag mb-3'>{job.type}</div>
                     <p>
                         {job.company}
                     </p>

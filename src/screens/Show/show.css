@@ -48,12 +48,6 @@
     border-color: #ff4343;
 }
 
-.t-form-input__error{
-    color: #ff4343;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
 .t-form-group{
     position: relative;
     margin-right: 30px;

@@ -6,10 +6,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import './show.css';
 import profile from "../../assets/imgs/profile.jpg"
 
-import Sidebar from './Sidebar'
-import ErrorText from './ErrorText'
+import Sidebar from '../../shared/components/Sidebar/Sidebar'
+import ErrorText from '../../shared/components/ErrorText/ErrorText'
 
-import { hasNumbers } from './constants'
+import { hasNumbers } from './helpers'
 
 import { postForm } from '../../requests/api'
 
@@ -176,7 +176,7 @@ const Show = ({ match }) => {
                     </div>
                 </div>
                 <div className='t-section t-notice'>
-                    <div className='t-flex-row t-flex--start t-flex-nowrap t-flex-start'>
+                    <div className='t-flex-row t-flex--start t-flex__nowrap t-flex-start'>
                         <input type="checkbox" onClick={() => setPrivateField(!privateField)} name="" id="" />
                         <h6 className='ml-3'>Make your profile private</h6>
                     </div>

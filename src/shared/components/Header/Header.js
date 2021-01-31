@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
+
 import { Container, DropdownButton, Dropdown, InputGroup, Navbar, Nav, NavDropdown, Form, Button, FormControl } from "react-bootstrap"
-import logo from "./assets/imgs/logo.png"
 import { BsSearch, BsChevronDown } from "react-icons/bs";
+
+import logo from "../../../assets/imgs/logo.png"
 
 const Header = () => {
     return (

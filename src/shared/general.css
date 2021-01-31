@@ -1,10 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.t-bg {
-  background-color: #fbfeff;
-}
 
 .t-section{
   margin-top: 50px;
@@ -14,20 +7,7 @@
   margin-bottom: 20px;
 }
 
-.secondary-bg {
-    background-color: #5566ff !important;
-    border-color: #5566ff !important;
-  }
-  
-.secondary-bg:hover{    
-    background-color: #929dff !important;
-    border-color: #929dff !important;
-}
-
-.bg {
-  background-color: #3044f6;
-}
-
+/* flex */
 .t-flex-row {
 display: flex;
 align-content: center;
@@ -41,11 +21,13 @@ margin: 0 auto;
   flex-direction: column;
 }
 
+/* vertical alignment */
 .t-flex--start{
   align-content: flex-start;
   align-items: flex-start;
 }
 
+/* horizontal alignment */
 .t-flex-start{
   justify-content: flex-start;
 }
@@ -56,12 +38,13 @@ margin: 0 auto;
 
 .t-flex-between{
   justify-content: space-between;
-  align-items: flex-start;
 }
 
-.t-flex-nowrap{
+.t-flex__nowrap{
  flex-wrap: nowrap;
 }
+
+/* card */
 
 .t-card {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -86,6 +69,10 @@ margin: 0 auto;
     height: 30px;
 }
 
+.t-card-header{
+  color: black
+}
+
 .t-card-footer{
   border-top: 1px solid #dee4e7;
   padding-top: 5px;  
@@ -93,7 +80,7 @@ margin: 0 auto;
    bottom: 10px;
 }
 
-.t-tag-card {
+.t-card-tag {
   width: fit-content;
   display: flex;
   align-items: center;
@@ -106,10 +93,7 @@ margin: 0 auto;
   padding: 5px 15px;
 }
 
-.t-card-header{
-  color: black
-}
-
+/* logo */
 .t-menu-logo{
   height:50px;
 }
@@ -121,10 +105,7 @@ margin: 0 auto;
 max-width:100%;
 max-height:100%;}
 
-.t-col-4{
-  flex-basis: calc(33.3333% - 30px);
-}
-
+/* icon */
 .t-icon {
   color: #c7ccfb;
   font-size: 20px;
@@ -139,18 +120,7 @@ max-height:100%;}
   color: #3044f6;
 }
 
-.t-sub-menu{
-  padding: 20px;
-}
-
-.t-sm {
-  font-size:14px
-}
-
-.mt-m1 {
-  margin-top: -10px;
-}
-
+/* btn */
 .t-btn{
   border: none;
   box-shadow: 1px 1px 5px #3044f6;;
@@ -171,4 +141,31 @@ max-height:100%;}
   color: #3044f6;
   box-shadow: 1px 1px 5px #3044f6;
   background: white;
+}
+
+/*  */
+.bg {
+  background-color: #3044f6;
+}
+
+.secondary-bg {
+    background-color: #5566ff !important;
+    border-color: #5566ff !important;
+  }
+  
+.secondary-bg:hover{    
+    background-color: #929dff !important;
+    border-color: #929dff !important;
+}
+
+.t-col-4{
+  flex-basis: calc(33.3333% - 30px);
+}
+
+.t-sm {
+  font-size:14px
+}
+
+.mt-m1 {
+  margin-top: -10px;
 }

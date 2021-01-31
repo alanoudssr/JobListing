@@ -1,5 +1,5 @@
 import React from 'react'
-import './show.css';
+import './errorText.css';
 
 const ErrorText = ({ children }) => {
     return (

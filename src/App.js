@@ -1,8 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import AppRoutes from './AppRoutes';
 import { BrowserRouter as Router } from "react-router-dom";
-import { Container } from "react-bootstrap"
+import './shared/general.css';
+import AppRoutes from './AppRoutes';
 
 function App() {
   return (

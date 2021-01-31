@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import './sidebar.css';
-import logo from "../../assets/imgs/logo.png"
+import logo from "../../../assets/imgs/logo.png"
 import { HiChatAlt2 } from 'react-icons/hi';
 
 const Sidebar = ({ active }) => {
@@ -19,7 +19,7 @@ const Sidebar = ({ active }) => {
                 </div>
             </div>
             <div className='t-sidebar-footer'>
-                <div className='t-flex-row t-flex-nowrap t-flex-between'>
+                <div className='t-flex-row t-flex__nowrap t-flex-between'>
                     <HiChatAlt2 className='t-icon-lg mt-m1 mr-2' />
                     <p className='t-sm pl-1'>
                         if you have any questions while filling the form in, welcome to our <a className='t-link' href="/help">Help Center</a>
