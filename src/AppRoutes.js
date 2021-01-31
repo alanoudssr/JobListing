@@ -8,8 +8,8 @@ const AppRoutes = () => {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={List} />
-                <Route path="/show/:title" component={Show} />
+                <Route exact path="/JobListing/" component={List} />
+                <Route path="/JobListing/show/:title" component={Show} />
             </Switch>
         </Router>
     )
