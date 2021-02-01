@@ -10,6 +10,16 @@ This project was created as a test project with react.
 - Form has validation (fields cannot be empty, country and city cannot contain numbers)
 - Once Form is validated you can submit by clicking Next Step
 
+<div style='display:flex;'>
+<img style='margin:20px;' src='https://i.imgur.com/kTYIzMC.png'>
+<img style='margin:20px;' src='https://i.imgur.com/YWpSc7p.png'>
+</div>
+<div style='display:flex;'>
+<img style='margin:20px;' src='https://i.imgur.com/ud5om1Y.png'>
+<img style='margin:20px;' src='https://i.imgur.com/PkfzowB.png'>
+</div>
+<img src='https://i.imgur.com/3exaN7j.png'>
+
 ## Available Scripts
 
 In the project directory, you can run:

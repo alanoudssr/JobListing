@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 import Header from '../../shared/components/Header/Header'
 import CustomDropdown from '../../shared/components/CustomeDropdown'
+import Subscribe from '../../shared/components/Subscribe/Subscribe'
 
 import logo from '../../assets/imgs/logo.png'
 import './list.css';
@@ -83,8 +84,10 @@ const List = () => {
                         </div>
                     </div>
                     <div className={classNames('t-flex-row', {
-                        't-flex-column': grid
+                        't-flex-column': grid,
+                        't-flex--start': !grid,
                     })}>
+                        <Subscribe />
                         {jobs ? renderJobs() : 'No jobs found'}
                     </div>
                 </Container>
