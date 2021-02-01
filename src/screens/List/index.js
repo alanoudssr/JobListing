@@ -4,7 +4,6 @@ import classNames from 'classnames'
 import { BsFillBookmarkFill, BsFillGridFill, BsList } from 'react-icons/bs';
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
 
 import Header from '../../shared/components/Header/Header'
 import CustomDropdown from '../../shared/components/CustomeDropdown'
@@ -21,8 +20,6 @@ const List = () => {
     const [bookmarks, setBookmarks] = useState([])
     const [grid, setGrid] = useState(false)
 
-    const notify = () => toast('Fetching Error: Try Again', { type: toast.TYPE.ERROR });
-
     useEffect(() => {
         getJobs()
             .then((results) => { setJobs(results) })
@@ -31,9 +28,9 @@ const List = () => {
 
     const renderJobs = () => {
 
-        return jobs.map(job => {
+        return jobs.map((job, index) => {
             return (
-                <div className='t-card t-link t-col-4' >
+                <div key={index} className='t-card t-link t-col-4' >
                     <div className='t-flex-row t-flex-between'>
                         {job.company_logo ?
                             <img className='sm t-logo mb-2' width={64} height={64} src={job.company_logo} alt={job.company} />
@@ -68,21 +65,10 @@ const List = () => {
     return (
         <Fragment>
             <Header />
-            <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
             <div className='t-bg'>
                 <Container>
                     <div className='t-flex-row t-flex-between pb-1 t-sub-menu'>
-                        <span>{`${jobs.length} jobs found`}</span>
+                        <span>{`${jobs ? jobs.length : '0'} jobs found`}</span>
                         <div className='t-flex-row m-0'>
                             <span>Sort By: </span>
                             <CustomDropdown />
@@ -99,7 +85,7 @@ const List = () => {
                     <div className={classNames('t-flex-row', {
                         't-flex-column': grid
                     })}>
-                        {renderJobs()}
+                        {jobs ? renderJobs() : 'No jobs found'}
                     </div>
                 </Container>
             </div>

@@ -1,37 +1,54 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 
 import { Container, DropdownButton, Dropdown, InputGroup, Navbar, Nav, NavDropdown, Form, Button, FormControl } from "react-bootstrap"
 import { BsSearch, BsChevronDown } from "react-icons/bs";
+import { Link } from 'react-router-dom'
 
 import logo from "../../../assets/imgs/logo.png"
 
+
 const Header = () => {
+
+    const [filters, setFilters] = useState([])
+
+    const handleClick = (e) => {
+        if (filters.includes(e.target.id)) {
+            setFilters(filters => filters.filter(item => item !== e.target.id))
+        } else {
+            setFilters(filters => [...filters, e.target.id])
+        }
+    }
+
+    const getStyle = (id) => {
+        return `${filters.includes(id) ? 'secondary-bg-btn secondary-bg-btn-active' : 'secondary-bg-btn'}`
+    }
+
     return (
         <Fragment>
             <Navbar className="bg" expand="lg" variant="dark">
-                <Navbar.Brand href="/"><img src={logo} /></Navbar.Brand>
-                <Container>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto">
-                            <Nav.Link href="/">Open Jobs</Nav.Link>
-                            <Nav.Link href="/talents">Talents</Nav.Link>
-                            <NavDropdown title="Resources" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="https://reactjs.org/">React</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="https://react-bootstrap.github.io/">Bootstrap</NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Community" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="https://github.com/">Github</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
-                    </Navbar.Collapse>
-                    <div className='t-flex-row t-flex-between'>
-                        <Button className="secondary-bg t-btn-lg">Post a Job</Button>
-                        <span className='t-login t-menu-link'>Log in</span>
-                        <span className='t-menu-link'>Sign Up</span>
-                    </div>
-                </Container>
+                <Navbar.Brand><Link to='/'><img src={logo} /></Link></Navbar.Brand>
+                {/* <Container> */}
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto t-nav-bar">
+                        <Nav.Link ><Link to='/' className='t-nav-link'>Open Jobs</Link></Nav.Link>
+                        <Nav.Link ><Link to='/talents' className='t-nav-link'>Talents</Link></Nav.Link>
+                        <NavDropdown title="Resources" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="https://reactjs.org/">React</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="https://react-bootstrap.github.io/">Bootstrap</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Community" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="https://github.com/">Github</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
+                <div className='t-flex-row t-flex-between'>
+                    <Button className="secondary-bg-btn t-btn-lg">Post a Job</Button>
+                    <span className='t-login t-menu-link'>Log in</span>
+                    <span className='t-menu-link'>Sign Up</span>
+                </div>
+                {/* </Container> */}
             </Navbar>
             <Navbar className="bg" expand="lg">
                 <Container>
@@ -58,12 +75,12 @@ const Header = () => {
             </Navbar>
             <Navbar className="bg" expand="lg">
                 <Container className="mb-4">
-                    <Button className="secondary-bg">Gender</Button>
-                    <Button className="secondary-bg">Age Range</Button>
-                    <Button className="secondary-bg">Skills</Button>
-                    <Button className="secondary-bg">Employment Status - Full Time</Button>
-                    <Button className="secondary-bg">Payment Type</Button>
-                    <Button className="secondary-bg">More Filters <BsChevronDown /></Button>
+                    <Button id='gender' onClick={(e) => handleClick(e)} className={getStyle('gender')}>Gender</Button>
+                    <Button id='age' onClick={(e) => handleClick(e)} className={getStyle('age')}>Age Range</Button>
+                    <Button id='skill' onClick={(e) => handleClick(e)} className={getStyle('skill')}>Skills</Button>
+                    <Button id='status' onClick={(e) => handleClick(e)} className={getStyle('status')}>Employment Status - Full Time</Button>
+                    <Button id='type' onClick={(e) => handleClick(e)} className={getStyle('type')}>Payment Type</Button>
+                    <Button className="secondary-bg-btn">More Filters <BsChevronDown /></Button>
                 </Container>
             </Navbar>
         </Fragment>

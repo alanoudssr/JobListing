@@ -8,8 +8,10 @@ const Sidebar = ({ active }) => {
     return (
         <div className='t-sidebar'>
             <div className='t-flex-row t-flex-column t-flex--start'>
-                <a className='m-6' href="/">
-                    <img className='t-menu-logo' src={logo} />
+                <a className='m-6' >
+                    <Link to='/'>
+                        <img className='t-menu-logo' src={logo} />
+                    </Link>
                 </a>
                 <div className='t-flex-row t-flex-column t-flex--start ml-6'>
                     <div className='mb-3 t-sidebar-item'><div className={`t-circle${active === 'General Info' ? '-active' : ''}`}>1</div><span className='ml-2'>General Info</span></div>

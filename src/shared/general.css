@@ -153,12 +153,22 @@ max-height:100%;}
   background-color: #3044f6;
 }
 
-.secondary-bg {
+.secondary-bg-btn {
     background-color: #5566ff !important;
     border-color: #5566ff !important;
   }
+
+.secondary-bg-btn-active {
+  background-color: #929dff !important;
+  border-color: #929dff !important;
+}
+
+.secondary-bg-btn-active::after {
+  content: 'x';
+  padding-left: 10px;
+}
   
-.secondary-bg:hover{    
+.secondary-bg-btn:hover{    
     background-color: #929dff !important;
     border-color: #929dff !important;
 }
@@ -175,13 +185,36 @@ max-height:100%;}
   margin-top: -10px;
 }
 
+.t-nav-bar:first-child {
+    margin-left: 60px !important;
+}
 .nav-link {
     color: white !important;
+    padding: 0 !important;
+    padding-right: 20px !important;
+    margin-right: 20px !important;
+}
+
+.nav-link:hover {
+    text-decoration: underline !important;
+}
+
+.t-nav-link{
+      color: white !important;
+}
+
+.t-nav-link:hover {
+    text-decoration: underline !important;
 }
 
 .t-menu-link {
   color: white;
   padding: 0px 20px;
+  cursor: pointer;
+}
+
+.t-menu-link:hover {
+  text-decoration: underline;
 }
 
 .t-login{
