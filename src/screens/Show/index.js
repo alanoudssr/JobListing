@@ -79,7 +79,21 @@ const Show = ({ match }) => {
 
     }
 
-
+    const clearForm = () => {
+        setAvatar('')
+        setTitleField('')
+        setOverviewField('')
+        setFileField('')
+        setCountryField('')
+        setCityField('')
+        setPrivateField(false)
+        setTitleFieldErr('')
+        setOverviewFieldErr('')
+        setCountryFieldErr('')
+        setCityFieldErr('')
+        setCountryNumErr('')
+        setCityNumErr('')
+    }
 
     const { title } = match.params
 
@@ -114,7 +128,7 @@ const Show = ({ match }) => {
                             <div className="t-form-group">
                                 <label htmlFor="title" className="t-form-group__label">Professional/Working Title</label>
                                 <div className="t-form-input t-form-input__lg">
-                                    <input className={`t-control ${titleFieldErr ? 't-control__error' : ''}`} onChange={(e) => setTitleField(e.target.value)} type="text" name="title" id="" />
+                                    <input value={titleField} className={`t-control ${titleFieldErr ? 't-control__error' : ''}`} onChange={(e) => setTitleField(e.target.value)} type="text" name="title" id="" />
                                     {titleFieldErr && (
                                         <ErrorText>
                                             Field cannot be empty
@@ -125,7 +139,7 @@ const Show = ({ match }) => {
                             <div className="t-form-group mt-3">
                                 <label htmlFor="overview" className="t-form-group__label">Professional Overview</label>
                                 <div className="t-form-input t-form-input__lg">
-                                    <textarea onChange={(e) => setOverviewField(e.target.value)} className={`t-control pt-2 t-control-area ${overviewFieldErr ? 't-control__error' : ''}`} name="overview" id="" />
+                                    <textarea value={overviewField} onChange={(e) => setOverviewField(e.target.value)} className={`t-control pt-2 t-control-area ${overviewFieldErr ? 't-control__error' : ''}`} name="overview" id="" />
                                     {overviewFieldErr && (
                                         <ErrorText>
                                             Field cannot be empty
@@ -154,7 +168,7 @@ const Show = ({ match }) => {
                         <div className="t-form-group">
                             <label htmlFor="country" className="t-form-group__label">Country</label>
                             <div className="t-form-input">
-                                <input className={`t-control ${countryFieldErr || countryNumErr ? 't-control__error' : ''}`} onChange={(e) => setCountryField(e.target.value)} type="text" name="country" id="" />
+                                <input value={countryField} className={`t-control ${countryFieldErr || countryNumErr ? 't-control__error' : ''}`} onChange={(e) => setCountryField(e.target.value)} type="text" name="country" id="" />
                                 {(countryFieldErr || countryNumErr) && (
                                     <ErrorText>
                                         {countryFieldErr ? 'Field cannot be empty' : 'Cannot contain numbers'}
@@ -165,7 +179,7 @@ const Show = ({ match }) => {
                         <div className="t-form-group ">
                             <label htmlFor="city" className="t-form-group__label">City</label>
                             <div className="t-form-input">
-                                <input className={`t-control ${cityFieldErr || cityNumErr ? 't-control__error' : ''}`} onChange={(e) => setCityField(e.target.value)} type="text" name="city" id="" />
+                                <input value={cityField} className={`t-control ${cityFieldErr || cityNumErr ? 't-control__error' : ''}`} onChange={(e) => setCityField(e.target.value)} type="text" name="city" id="" />
                                 {(cityFieldErr || cityNumErr) && (
                                     <ErrorText>
                                         {cityFieldErr ? 'Field cannot be empty' : 'Cannot contain numbers'}
@@ -177,7 +191,7 @@ const Show = ({ match }) => {
                 </div>
                 <div className='t-section t-notice'>
                     <div className='t-flex-row t-flex--start t-flex__nowrap t-flex-start'>
-                        <input type="checkbox" onClick={() => setPrivateField(!privateField)} name="" id="" />
+                        <input value={privateField} type="checkbox" onClick={() => setPrivateField(!privateField)} name="" id="" />
                         <h6 className='ml-3'>Make your profile private</h6>
                     </div>
                     <p className='ml-4 mt-2 t-notice-text'>
@@ -186,7 +200,7 @@ const Show = ({ match }) => {
                 </div>
                 <div className='t-section'>
                     <div className='t-form-row t-flex-end'>
-                        <button className='t-btn t-btn-reverse'>Cancel</button>
+                        <button className='t-btn t-btn-reverse' onClick={() => clearForm()}>Cancel</button>
                         <button className='ml-3 t-btn' onClick={() => validate()}>Next Step</button>
                     </div>
                 </div>
